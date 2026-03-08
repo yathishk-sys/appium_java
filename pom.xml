@@ -12,9 +12,10 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.10.2</junit.jupiter.version>
-        <appium.java.client.version>9.2.3</appium.java.client.version>
+        <appium.java.client.version>9.5.0</appium.java.client.version>
         <slf4j.version>2.0.13</slf4j.version>
         <surefire.version>3.2.5</surefire.version>
+        <selenium.version>4.34.0</selenium.version>
     </properties>
 
     <dependencies>
@@ -24,12 +25,18 @@
             <version>${appium.java.client.version}</version>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
+        <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.9.0</version>
+        <scope>test</scope>
+    </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -37,6 +44,22 @@
             <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>${selenium.version}</version>
+</dependency>
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-api</artifactId>
+<version>${selenium.version}</version>
+</dependency>
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-remote-driver</artifactId>
+<version>${selenium.version}</version>
+</dependency>
     </dependencies>
 
     <build>
